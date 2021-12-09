@@ -4,11 +4,23 @@ public class Book {
 	long id; 
 	String book;
 	String author;
+	int copies;
+	
+
+	public Book(long id, String book, String author, int copies) {
+		super();
+		this.id = id;
+		this.book = book;
+		this.author = author;
+		this.copies = copies;
+	}
+
 	public Book(long id, String book, String author) {
 		super();
 		this.id = id;
 		this.book = book;
 		this.author = author;
+		
 	}
 	
 	public void setId(long id) {
@@ -32,10 +44,20 @@ public class Book {
 	public String getAuthor() {
 		return author;
 	}
+	public int getCopies() {
+		return copies;
+	}
+
+	public void setCopies(int copies) {
+		this.copies = copies;
+	}
+
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", book=" + book + ", author=" + author + "]";
+		return "Book [id=" + id + ", book=" + book + ", author=" + author + ", copies=" + copies + "]";
 	}
+	
+	
 	
 
 }
